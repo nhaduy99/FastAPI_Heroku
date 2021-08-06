@@ -7,6 +7,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import tensorflow as tf
 import re
 
+print(tf.__version__)
+
 
 app = FastAPI()
 
@@ -57,4 +59,3 @@ def predict(text:str = Form(...)):
 @app.get('/')
 def basic_view():
     return {"WELCOME": "GO TO /docs route, or /post or send post request to /predict "}
-    
